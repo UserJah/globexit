@@ -15,5 +15,6 @@ export const getAllUsersData = async () => {
 export const getFilteredUsersData = async (searchValue) => {
   const response = axiosInstance.get(`?term=${searchValue}`);
   const UserList = (await response).data;
+  
   return UserList;
 }
