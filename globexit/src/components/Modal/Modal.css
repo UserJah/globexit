@@ -55,9 +55,18 @@
   text-overflow: ellipsis;
 }
 
+.modalContent__data span:nth-child(1) {
+  text-decoration-line: underline;
+}
+
+.modalContent__data span:nth-child(2) {
+  text-decoration-line: underline;
+}
+
 .modalContent__closeBtn {
+  position: absolute;
   margin-left: 230px;
-  margin-top: -60px;
+  margin-top: -45px;
   width: 50px;
   cursor: pointer;
 }
