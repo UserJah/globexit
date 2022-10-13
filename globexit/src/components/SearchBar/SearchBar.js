@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { getFilteredUsersData } from "../services/api";
+import { getFilteredUsersData } from "../../services/api";
+import './SearchBar.css'
 
 function SearchBar({updateData}) {
   const [isLoading, setIsLoading] = useState(false);
@@ -21,11 +22,11 @@ function SearchBar({updateData}) {
     const value = event.target.value;
 
     setSearchValue(value);
-  }
+  };
 
   return (
-    <div className=''>
-      <form action="" onSubmit={handleSubmit}>
+    <div className='search-bar'>
+      <form onSubmit={handleSubmit}>
         <input
           onChange={handleChange}
           value={searchValue}

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import SearchBar from '../components/SearchBar';
-import UserCardList from '../components/UserCardList';
+import SearchBar from '../components/SearchBar/SearchBar';
+import UserCardList from '../components/UserCardList/UserCardList';
 import { getAllUsersData } from '../services/api';
+import './Main.css'
 
 function Main() {
   const [userData, setUserData] = useState([]);
@@ -17,10 +18,10 @@ function Main() {
   }
 
   return (
-    <>
+    <div className='mainPage'>
       <SearchBar updateData={updateData} />
       <UserCardList userData={userData} />
-    </>
+    </div>
   )
 }
 
